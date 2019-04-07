@@ -51,8 +51,6 @@ Prototype Refactor
 
 // Test you work by un-commenting these 3 objects and the list of console logs below:
 
-// Class function
-
 class GameObject {
   constructor(attr) {
     this.createdAt = attr.createdAt;
@@ -63,6 +61,7 @@ class GameObject {
     return `${this.name} was removed from the game.`
   }
 }
+
 class CharacterStats extends GameObject {
   constructor(attr) {
     super(attr)
@@ -74,8 +73,6 @@ class CharacterStats extends GameObject {
 }
 
 class Humanoid extends CharacterStats {
-  // GameObject.call(this, attr);
-  // CharacterStats.call(this, attr);
   constructor(attr) {
     super(attr)
     this.team = attr.team;
@@ -86,12 +83,6 @@ class Humanoid extends CharacterStats {
     return `${this.name} offers a greeting in ${this.language}.`
   }
 }
-
-// Humanoid.prototype = Object.create(CharacterStats.prototype)
-
-// Humanoid.prototype.greet = function () {
-//   return `${this.name} offers a greeting in ${this.language}.`
-// }
 
 /* 
 
