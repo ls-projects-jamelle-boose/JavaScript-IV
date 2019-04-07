@@ -54,45 +54,48 @@ Prototype Refactor
 // Class function
 
 class GameObject {
-  constructor() {
-
+  constructor(attr) {
+    this.createdAt = attr.createdAt;
+    this.name = attr.name;
+    this.dimensions = attr.dimensions;
+  }
+  destroy() {
+    return `${this.name} was removed from the game.`
+  }
+}
+class CharacterStats extends GameObject {
+  constructor(attr) {
+    super(attr)
+    this.healthPoints = attr.healthPoints;
+  }
+  takeDamage() {
+    return `${this.name} took damage.`
   }
 }
 
-//constructor function
-function GameObject(attr) {
-  this.createdAt = attr.createdAt;
-  this.name = attr.name;
-  this.dimensions = attr.dimensions;
+class Humanoid extends CharacterStats {
+  // GameObject.call(this, attr);
+  // CharacterStats.call(this, attr);
+  constructor(attr) {
+    super(attr)
+    this.team = attr.team;
+    this.weapons = attr.weapons;
+    this.language = attr.language;
+  }
+  greet() {
+    return `${this.name} offers a greeting in ${this.language}.`
+  }
 }
 
-GameObject.prototype.destroy = function () {
-  return `${this.name} was removed from the game.`
-}
+// Humanoid.prototype = Object.create(CharacterStats.prototype)
 
-function CharacterStats(attr) {
-  this.healthPoints = attr.healthPoints;
-}
+// Humanoid.prototype.greet = function () {
+//   return `${this.name} offers a greeting in ${this.language}.`
+// }
 
-CharacterStats.prototype = Object.create(GameObject.prototype)
+/* 
 
-CharacterStats.prototype.takeDamage = function () {
-  return `${this.name} took damage.`
-}
-
-function Humanoid(attr) {
-  GameObject.call(this, attr);
-  CharacterStats.call(this, attr);
-  this.team = attr.team;
-  this.weapons = attr.weapons;
-  this.language = attr.language;
-}
-
-Humanoid.prototype = Object.create(CharacterStats.prototype)
-
-Humanoid.prototype.greet = function () {
-  return `${this.name} offers a greeting in ${this.language}.`
-}
+Stretch goal attempt:
 
 function Hero(attr) {
   Humanoid.call(this, attr);
@@ -104,11 +107,9 @@ Hero.prototype.kick = function () {
 
 function Villain(attr) {
   Humanoid.call(this, attr);
-}
+} 
 
-Humanoid.prototype.greet = function () {
-  return `${this.name} offers a greeting in ${this.language}.`
-}
+*/
 
 const mage = new Humanoid({
   createdAt: new Date(),
