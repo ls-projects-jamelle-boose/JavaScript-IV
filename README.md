@@ -6,18 +6,18 @@ This challenge focuses on classes in JavaScript using the new `class` keyword.
 
 **Follow these steps to set up and work on your project:**
 
-* [ x ] Create a forked copy of this project.
-* [ x ] Add your project manager as collaborator on Github.
-* [ x ] Clone your OWN version of the repository (Not Lambda's by mistake!).
-* [ x ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ x ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ x ] Push commits: git push origin `<firstName-lastName>`.
+* [x] Create a forked copy of this project.
+* [x] Add your project manager as collaborator on Github.
+* [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
+* [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [x] Push commits: git push origin `<firstName-lastName>`.
 
 **Follow these steps for completing your project.**
 
-* [ x ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
-* [ x ] Add your project manager as a reviewer on the pull-request
-* [ x ] Your project manager will count the project as complete by merging the branch back into master.
+* [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+* [x] Add your project manager as a reviewer on the pull-request
+* [x] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Assignment Description
 
@@ -70,22 +70,22 @@ const fred = new Instructor({
 
 #### Person
 
-* First we need a Person class. This will be our `base-class`
-* Person receives `name` `age` `location` `gender` all as props
-* Person receives `speak` as a method.
-* This method logs out a phrase `Hello my name is Fred, I am from Bedrock` where `name` and `location` are the object's own props
+- [x] * First we need a Person class. This will be our `base-class`
+- [x] * Person receives `name` `age` `location` `gender` all as props
+- [x] * Person receives `speak` as a method.
+- [x] * This method logs out a phrase `Hello my name is Fred, I am from Bedrock` where `name` and `location` are the object's own props
 
 #### Instructor
 
-* Now that we have a Person as our base class, we'll build our Instructor class.
-* Instructor uses the same attributes that have been set up by Person
-* Instructor has the following unique props:
-  * `specialty` what the Instructor is good at i.e. 'redux'
-  * `favLanguage` i.e. 'JavaScript, Python, Elm etc.'
-  * `catchPhrase` i.e. `Don't forget the homies`
-* Instructor has the following methods:
-  * `demo` receives a `subject` string as an argument and logs out the phrase 'Today we are learning about {subject}' where subject is the param passed in.
-  * `grade` receives a `student` object and a `subject` string as arguments and logs out '{student.name} receives a perfect score on {subject}'
+- [x] * Now that we have a Person as our base class, we'll build our Instructor class.
+- [x] * Instructor uses the same attributes that have been set up by Person
+- [x] * Instructor has the following unique props:
+  - [x] * `specialty` what the Instructor is good at i.e. 'redux'
+  - [x] * `favLanguage` i.e. 'JavaScript, Python, Elm etc.'
+  - [x] * `catchPhrase` i.e. `Don't forget the homies`
+- [x] * Instructor has the following methods:
+  - [x] * `demo` receives a `subject` string as an argument and logs out the phrase 'Today we are learning about {subject}' where subject is the param passed in.
+  - [x] * `grade` receives a `student` object and a `subject` string as arguments and logs out '{student.name} receives a perfect score on {subject}'
 
 #### Student
 
